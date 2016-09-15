@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8ece8"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LL_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_user"
+                android:text="手机号："
+                android:textSize="20sp"
+                android:layout_toLeftOf="@+id/et_telephone"
+                android:layout_toStartOf="@+id/et_telephone"
+                android:layout_marginBottom="42dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/et_telephone"
+                android:hint="请输入手机号"
+                android:textSize="20sp"
+                android:textColorHint="#c2bebe"
+                android:layout_alignBottom="@+id/imageView5" />
+
+            <requestFocus />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LL_SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1"
+            android:layout_below="@id/LL_telephone"
+            android:layout_marginBottom="42dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/et_inputSMS"
+                android:hint="输入验证码"
+                android:textSize="20sp"
+                android:textColorHint="#c2bebe"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:id="@+id/bt_getSMS"
+                android:text="获取验证码"
+                android:background="#eeddcc"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL_password"
+            android:layout_below="@+id/LL_SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_password"
+                android:text="密码："
+                android:textSize="20sp"
+                android:layout_marginBottom="42dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/et_password"
+                android:hint="请输入密码"
+                android:textSize="20sp"
+                android:textColorHint="#c2bebe"
+                android:layout_alignTop="@+id/imageView6"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/LL_confirmPassword"
+            android:layout_below="@+id/LL_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_confirmPassword"
+                android:text="确认密码："
+                android:textSize="20sp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/et_confirmPassword"
+                android:ems="10"
+                android:hint="请再次输入密码"
+                android:textSize="20dp"
+                android:textColorHint="#c2bebe"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:id="@+id/btn_register"
+            android:textColor="#263238"
+            android:background="#75d897"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/LL_confirmPassword"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</LinearLayout>
